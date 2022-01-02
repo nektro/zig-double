@@ -5,7 +5,7 @@ pub fn build(b: *Builder) void {
     const mode = b.standardReleaseOptions();
     const lib = b.addStaticLibrary("zig-double", "src/main.zig");
     lib.setBuildMode(mode);
-    deps.addAllTo(lib)
+    deps.addAllTo(lib);
     lib.install();
 
     var main_tests = b.addTest("src/main.zig");
